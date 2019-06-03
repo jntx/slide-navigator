@@ -1,17 +1,17 @@
-
+import { Controls } from './models/Controls';
 /*
 document.addEventListener("DOMContentLoaded", e => {
 	slideController(document.querySelector(".slides"), ".slide");
 });
 */
 
-function slideController(container :HTMLElement, slideSelector :string) {
+function slideController(container : HTMLElement, slideSelector : string) {
 	let doc = document;
 	let host = container;
-	let hostContainer = doc.querySelector("html") || {};
-	let slides :NodeListOf<HTMLElement> = container.querySelectorAll(slideSelector);
+	let hostContainer = doc.querySelector("html") || { scrollTop : 0 };
+	let slides : NodeListOf<HTMLElement> = container.querySelectorAll(slideSelector);
 	let position = 0;
-	let controls = {
+	let controls : Controls = {
 		prev : null,
 		count : null,
 		next : null
