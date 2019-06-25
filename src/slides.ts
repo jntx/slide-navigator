@@ -1,9 +1,4 @@
 import { Controls } from './models/Controls';
-/*
-document.addEventListener("DOMContentLoaded", e => {
-	slideController(document.querySelector(".slides"), ".slide");
-});
-*/
 
 function slideController(container : HTMLElement, slideSelector : string) {
 	let doc = document;
